@@ -63,20 +63,17 @@ pipeline {
  stage('AnsibleRoleClone') {
             steps{
                 script {
-                    deployToEC2.gitClone("http://ec2-3-16-78-26.us-east-2.compute.amazonaws.com/Subinay/jenkinsinstallansiblerole.git")
+                    deployToEC2.gitClone("https://github.com/Samlee97/AnsibleRole.git")
                     }
                 }
         }
-        stage('DeployToEC2') {
+  stage('DeployToEC2') {
             steps{
                 script {
-                    deployToEC2.playbook('jenkinsinstallansiblerole/host', 'jenkinsinstallansiblerole/DeployToEC2.yml')
-                }
+                    deployToEC2.playbook('ansiblerole/host', 'ansiblerole/DeployToEC2.yml')
+                  }
             }
         }
-    
-    }
-}
 post {
     always {
     notification(currentBuild.currentResult)
