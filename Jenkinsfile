@@ -74,11 +74,11 @@ pipeline {
                   }
             }
         }
-post {
+/*post {
     always {
     notification(currentBuild.currentResult)
 }
 
-} 
+}*/ 
     }
 }
