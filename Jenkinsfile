@@ -7,7 +7,7 @@ pipeline {
     agent any
     stages{
          
-    /* stage('Create Project in JIRA'){
+    stage('Create Project in JIRA'){
             steps{
              jira_create_project()
             }
@@ -17,11 +17,11 @@ pipeline {
      steps{
          jira_create_issues()
      }
- }*/
+ }
         stage('Checkout') {
             steps{
        //git branch: 'Master', credentialsId: 'Rig-sharedlib', url: 'http://rig@18.224.68.30:7990/scm/dem/app.git'
-                git credentialsId: 'bitbucket_Url', url: 'http://rig@18.224.68.30:7990/scm/dem/app.git'
+                git credentialsId: 'bitbucket_Url', url: 'http://rig@{BB_URL}'
    }
             }
         
