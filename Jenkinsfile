@@ -32,7 +32,7 @@ pipeline {
             }
         }
     
-     /*stage('Code Analysis') 
+     stage('Code Analysis') 
            { environment {
              scannerHome=tool 'sonar scanner'
            }
@@ -40,7 +40,7 @@ pipeline {
                 echo 'starting sonarqube anaysis'
                  sonar()
                 }
-            }*/
+            }
           
   
   stage('QualityGate') {
@@ -60,7 +60,7 @@ pipeline {
             }
          
 
-/* stage('AnsibleRoleClone') {
+ stage('AnsibleRoleClone') {
             steps{
                 script {
                     deployToEC2.gitClone("http://ec2-3-16-78-26.us-east-2.compute.amazonaws.com/Subinay/jenkinsinstallansiblerole.git")
@@ -73,13 +73,13 @@ pipeline {
                     deployToEC2.playbook('jenkinsinstallansiblerole/host', 'jenkinsinstallansiblerole/DeployToEC2.yml')
                 }
             }
-        }*/
+        }
     
     }
 }
-/*post {
+post {
     always {
     notification(currentBuild.currentResult)
 }
-} */
+} 
 
