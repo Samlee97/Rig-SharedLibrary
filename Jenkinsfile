@@ -80,5 +80,5 @@ post {
     always {
     notification(currentBuild.currentResult)
 }
-} *?
+} */
 
