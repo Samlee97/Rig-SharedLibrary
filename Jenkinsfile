@@ -72,11 +72,11 @@ pipeline {
                     deployToEC2.playbook('jenkinsinstallansiblerole/host', 'jenkinsinstallansiblerole/DeployToEC2.yml')
                 }
             }
-        }
+        }*/
     
     }
 }
-post {
+/*post {
     always {
     notification(currentBuild.currentResult)
 }
