@@ -63,7 +63,7 @@ pipeline {
  stage('AnsibleRoleClone') {
             steps{
                 script {
-                    deployToEC2.gitClone("https://github.com/Samlee97/AnsibleRole.git")
+                    deployToEC2.gitClone()
                     }
                 }
         }
