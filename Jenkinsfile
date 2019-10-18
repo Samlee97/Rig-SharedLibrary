@@ -7,7 +7,7 @@ pipeline {
     agent any
     stages{
          
-     stage('Create Project in JIRA'){
+    /* stage('Create Project in JIRA'){
             steps{
              jira_create_project()
             }
@@ -17,7 +17,7 @@ pipeline {
      steps{
          jira_create_issues()
      }
- }
+ }*/
         stage('Checkout') {
             steps{
        git branch: 'Master', credentialsId: '8884589124', url: 'http://chenna@ec2-18-224-68-30.us-east-2.compute.amazonaws.com:7990/scm/dem/web_1.git'
