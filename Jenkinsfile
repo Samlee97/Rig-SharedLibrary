@@ -20,8 +20,8 @@ pipeline {
  }
         stage('Checkout') {
             steps{
-       //git branch: 'Master', credentialsId: 'Rig-sharedlib', url: 'http://rig@18.224.68.30:7990/scm/dem/app.git'
-                git credentialsId: 'bitbucket_Url', url: 'http://rig@{BB_URL}'
+       
+             git credentialsId: 'bitbucket_Url', url: 'http://rig@{BB_URL}'
    }
             }
         
@@ -78,5 +78,6 @@ post {
     always {
     notification(currentBuild.currentResult)
 }
+
 } 
     }
