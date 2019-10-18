@@ -32,7 +32,7 @@ pipeline {
             }
         }
     
-     stage('Code Analysis') 
+     /*stage('Code Analysis') 
            { environment {
              scannerHome=tool 'sonar scanner'
            }
@@ -40,7 +40,7 @@ pipeline {
                 echo 'starting sonarqube anaysis'
                  sonar()
                 }
-            }
+            }*/
           
   
   stage('QualityGate') {
