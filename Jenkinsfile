@@ -7,7 +7,7 @@ pipeline {
     agent any
     stages{
          
-   /* stage('Create Project in JIRA'){
+    stage('Create Project in JIRA'){
             steps{
              jira_create_project()
             }
@@ -60,7 +60,7 @@ pipeline {
             }
          
 
-/* stage('AnsibleRoleClone') {
+ stage('AnsibleRoleClone') {
             steps{
                 script {
                     deployToEC2.gitClone()
@@ -73,7 +73,7 @@ pipeline {
                     deployToEC2.playbook('ansiblerole/host', 'ansiblerole/DeployToEC2.yml')
                   }
             }
-        }*/
+        }
     }
 post {
     always {
