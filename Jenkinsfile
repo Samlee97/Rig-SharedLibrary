@@ -48,7 +48,7 @@ pipeline {
             echo 'starting quaity gates'          
           qualityGates() //this stage will fail if project quality doesn't meet its quality profile
       }
-  }  */
+  }  
          
   
         
