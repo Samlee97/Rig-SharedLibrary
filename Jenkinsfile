@@ -77,9 +77,9 @@ pipeline {
     }
 /*post {
     always {
-    notification(currentBuild.currentResult)*/
+    notification(currentBuild.currentResult)
 }
 
-}
+}*/
 
 
