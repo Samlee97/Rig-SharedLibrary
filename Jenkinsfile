@@ -79,7 +79,7 @@ pipeline {
     always {
     notification(currentBuild.currentResult)*/
 }
-}
+
 }
 
 }
