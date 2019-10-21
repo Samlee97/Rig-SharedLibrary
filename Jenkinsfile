@@ -21,7 +21,7 @@ pipeline {
         stage('Checkout') {
             steps{
        
-             git credentialsId: 'bitbucket_Url', url: 'http://rig@{BB_URL}'
+             git credentialsId: 'bitbucket_Url', url: 'http//:18.224.68.30:7990/scm/dem/app.git'
    }
             }
         
