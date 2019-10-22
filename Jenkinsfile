@@ -7,7 +7,7 @@ pipeline {
     agent any
     stages{
          
-    /*stage('Create Project in JIRA'){
+    stage('Create Project in JIRA'){
             steps{
              jira_create_project()
             }
@@ -17,7 +17,7 @@ pipeline {
      steps{
          jira_create_issues()
      }
- }*/
+ }
         stage('Checkout') {
             steps{
        
